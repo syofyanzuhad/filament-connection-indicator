@@ -18,6 +18,11 @@ A **zero-dependency, client-side** Filament plugin that renders a real-time puls
 | `slow` | Orange `#f97316` | effectiveType = `2g` / `slow-2g` |
 | `offline` | Red `#ef4444` | `navigator.onLine === false` |
 
+<img width="318" height="192" alt="image" src="https://github.com/user-attachments/assets/f3ce62c9-ac16-4217-9fa3-f45655988aa9" />
+<img width="324" height="191" alt="image" src="https://github.com/user-attachments/assets/084fd886-3d27-485a-8059-8a3ff01527b6" />
+<img width="318" height="194" alt="image" src="https://github.com/user-attachments/assets/5a50b87d-1a09-4c31-ae93-bf2a31414d30" />
+<img width="321" height="191" alt="image" src="https://github.com/user-attachments/assets/7933fdbd-ad09-4145-b995-3cc7c0dc79b2" />
+
 ## Installation
 
 You can install the package via composer:
@@ -61,7 +66,10 @@ public function panel(Panel $panel): Panel
 
 The indicator supports two visual styles:
 - **`dot`** (default) — Pulsing circular dot with smooth ping animation.
+<img width="314" height="188" alt="image" src="https://github.com/user-attachments/assets/70cc9ce7-e9e2-46bf-a89e-6f26e82c3b38" />
+
 - **`bars`** — 4-tier vertical signal bars (cellular / Wi-Fi style) that fill dynamically based on connection quality, and shows an offline strike line when disconnected.
+<img width="318" height="192" alt="image" src="https://github.com/user-attachments/assets/f3ce62c9-ac16-4217-9fa3-f45655988aa9" />
 
 You can set the style fluently on the plugin:
 
