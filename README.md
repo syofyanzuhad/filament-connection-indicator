@@ -6,7 +6,7 @@
 [![GitHub PHPStan Action Status](https://img.shields.io/github/actions/workflow/status/syofyanzuhad/filament-connection-indicator/phpstan.yml?branch=5.x&label=phpstan&style=flat-square)](https://github.com/syofyanzuhad/filament-connection-indicator/actions?query=workflow%3Aphpstan+branch%3A5.x)
 [![Total Downloads](https://img.shields.io/packagist/dt/syofyanzuhad/filament-connection-indicator.svg?style=flat-square)](https://packagist.org/packages/syofyanzuhad/filament-connection-indicator)
 
-<img width="2752" height="1536" alt="filament-connection" src="https://github.com/user-attachments/assets/8db2b719-bdec-428e-9f9f-33acf613363c" />
+<img width="2752" height="1536" alt="filament-connection" class="filament-hidden" src="https://github.com/user-attachments/assets/8db2b719-bdec-428e-9f9f-33acf613363c" />
 
 A **zero-dependency, client-side** Filament plugin that renders a real-time pulsing signal dot in your Filament panel (defaulting before the user menu). It uses the browser's native **Network Information API** and `navigator.onLine` to reflect connection quality without any WebSocket polling or server round-trips.
 
