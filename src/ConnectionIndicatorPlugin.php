@@ -12,6 +12,8 @@ class ConnectionIndicatorPlugin implements Plugin
 {
     public string $renderHook = PanelsRenderHook::USER_MENU_BEFORE;
 
+    public ?string $style = null;
+
     // ─── Fluent API ───────────────────────────────────────────────────────────
 
     public static function make(): static
@@ -43,6 +45,31 @@ class ConnectionIndicatorPlugin implements Plugin
         return $this->renderHook;
     }
 
+    /**
+     * Set the indicator visual style ('dot' or 'bars').
+     */
+    public function style(string $style): static
+    {
+        $this->style = $style;
+
+        return $this;
+    }
+
+    public function dot(): static
+    {
+        return $this->style('dot');
+    }
+
+    public function bars(): static
+    {
+        return $this->style('bars');
+    }
+
+    public function getStyle(): string
+    {
+        return $this->style ?? config('connection-indicator.style', 'dot');
+    }
+
     // ─── Plugin Contract ─────────────────────────────────────────────────────
 
     public function getId(): string
@@ -59,7 +86,9 @@ class ConnectionIndicatorPlugin implements Plugin
     {
         FilamentView::registerRenderHook(
             $this->renderHook,
-            fn (): View => view('connection-indicator::connection-indicator'),
+            fn (): View => view('connection-indicator::connection-indicator', [
+                'style' => $this->getStyle(),
+            ]),
         );
     }
 }

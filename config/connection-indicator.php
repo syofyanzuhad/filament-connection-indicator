@@ -4,6 +4,17 @@
 return [
     /*
     |--------------------------------------------------------------------------
+    | Indicator UI Style
+    |--------------------------------------------------------------------------
+    | The visual appearance of the connection indicator.
+    | Options:
+    |   - 'dot'  : Pulsing signal dot with ping animation (default)
+    |   - 'bars' : 4-tier vertical signal bars (cellular / Wi-Fi style)
+    */
+    'style' => 'dot',
+
+    /*
+    |--------------------------------------------------------------------------
     | Tooltip Labels
     |--------------------------------------------------------------------------
     | Override per locale or publish this file with `vendor:publish`.

@@ -56,6 +56,24 @@ public function panel(Panel $panel): Panel
 }
 ```
 
+### UI Styles
+
+The indicator supports two visual styles:
+- **`dot`** (default) — Pulsing circular dot with smooth ping animation.
+- **`bars`** — 4-tier vertical signal bars (cellular / Wi-Fi style) that fill dynamically based on connection quality, and shows an offline strike line when disconnected.
+
+You can set the style fluently on the plugin:
+
+```php
+// Use vertical signal bars
+ConnectionIndicatorPlugin::make()
+    ->bars() // or ->style('bars')
+
+// Or explicitly use the pulsing dot
+ConnectionIndicatorPlugin::make()
+    ->dot() // or ->style('dot')
+```
+
 ### Custom Render Hook
 
 By default, the indicator is rendered before the user menu (`PanelsRenderHook::USER_MENU_BEFORE`). You can customize where it appears:
@@ -71,6 +89,15 @@ This is the contents of the published config file (`config/connection-indicator.
 
 ```php
 return [
+    /*
+    |--------------------------------------------------------------------------
+    | Indicator UI Style
+    |--------------------------------------------------------------------------
+    | Supported options: 'dot', 'bars'
+    | Default: 'dot'
+    */
+    'style' => 'dot',
+
     /*
     |--------------------------------------------------------------------------
     | Tooltip Labels
