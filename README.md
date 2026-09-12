@@ -1,8 +1,9 @@
 # Filament Connection Indicator
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/syofyanzuhad/filament-connection-indicator.svg?style=flat-square)](https://packagist.org/packages/syofyanzuhad/filament-connection-indicator)
-[![GitHub Tests Action Status](https://img.shields.io/github/actions/workflow/status/syofyanzuhad/filament-connection-indicator/run-tests.yml?branch=main&label=tests&style=flat-square)](https://github.com/syofyanzuhad/filament-connection-indicator/actions?query=workflow%3Arun-tests+branch%3Amain)
-[![GitHub Code Style Action Status](https://img.shields.io/github/actions/workflow/status/syofyanzuhad/filament-connection-indicator/fix-php-code-style-issues.yml?branch=main&label=code%20style&style=flat-square)](https://github.com/syofyanzuhad/filament-connection-indicator/actions?query=workflow%3A"Fix+PHP+code+styling"+branch%3Amain)
+[![GitHub Tests Action Status](https://img.shields.io/github/actions/workflow/status/syofyanzuhad/filament-connection-indicator/tests.yml?branch=5.x&label=tests&style=flat-square)](https://github.com/syofyanzuhad/filament-connection-indicator/actions?query=workflow%3Atests+branch%3A5.x)
+[![GitHub Code Style Action Status](https://img.shields.io/github/actions/workflow/status/syofyanzuhad/filament-connection-indicator/fix-code-style.yml?branch=5.x&label=code%20style&style=flat-square)](https://github.com/syofyanzuhad/filament-connection-indicator/actions?query=workflow%3Afix-code-style+branch%3A5.x)
+[![GitHub PHPStan Action Status](https://img.shields.io/github/actions/workflow/status/syofyanzuhad/filament-connection-indicator/phpstan.yml?branch=5.x&label=phpstan&style=flat-square)](https://github.com/syofyanzuhad/filament-connection-indicator/actions?query=workflow%3Aphpstan+branch%3A5.x)
 [![Total Downloads](https://img.shields.io/packagist/dt/syofyanzuhad/filament-connection-indicator.svg?style=flat-square)](https://packagist.org/packages/syofyanzuhad/filament-connection-indicator)
 
 A **zero-dependency, client-side** Filament plugin that renders a real-time pulsing signal dot in your Filament panel (defaulting before the user menu). It uses the browser's native **Network Information API** and `navigator.onLine` to reflect connection quality without any WebSocket polling or server round-trips.
